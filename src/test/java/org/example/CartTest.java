@@ -54,7 +54,7 @@ class CartTest {
     }
 
     @Test
-    void getPruducts() {
+    void getProducts() {
         assertEquals(3, cart.getProducts().size());
     }
 
