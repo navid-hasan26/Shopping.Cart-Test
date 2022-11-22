@@ -17,6 +17,7 @@ class CartTest {
     static void init() {
         cart = new Cart(100);
         shop = Shop.getInstance();
+
         product1 = new Product("Pen", 20);
         product2 = new Product("Pencil", 30);
         product3 = new Product("Book", 50);
@@ -30,26 +31,26 @@ class CartTest {
     @Test
     @Order(1)
     void addProduct() {
-        assertEquals(100, cart.addProduct(product1));
+        assertEquals(120, cart.addProduct(product1));
     }
 
     @Test
     @Order(2)
     void removeProduct() {
-        assertEquals(80, cart.removeProduct(product1));
+        assertEquals(100, cart.removeProduct(product1));
     }
 
     @Test
     @Order(3)
     void updateProduct() {
         product2.setPrice(50);
-        assertEquals(100, cart.updateProduct(product1));
+        assertEquals(120, cart.updateProduct(product1));
     }
 
     @Test
     @Order(4)
     void checkout() {
-        assertEquals(100, cart.checkout());
+        assertEquals(120, cart.checkout());
     }
 
     @Test
@@ -70,6 +71,6 @@ class CartTest {
 
     @Test
     void getTotalPrice() {
-        assertEquals(100, cart.getTotalPrice());
+        assertEquals(120, cart.getTotalPrice());
     }
 }

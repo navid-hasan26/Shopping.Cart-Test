@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.List;
 
-public class Customer implements iCustomer {
+public class Customer implements iCustomer{
     private int id;
     private String name;
     private String address;
@@ -11,28 +11,26 @@ public class Customer implements iCustomer {
 
 
     public Customer(String name) {
-        this.id = (int) (Math.random() * 1000);
-        this.currentCart = new Cart(this.id);
+        this.id= (int) (Math.random()*1000);
+        this.currentCart=new Cart(this.id);
         this.name = name;
-        this.address = "N.A";
+        this.address="N.A";
 
 
     }
-
-    public Customer(String name, String address, String phone) {
-        this.id = (int) (Math.random() * 1000);
-        this.currentCart = new Cart(this.id);
+    public Customer(String name,String address,String phone) {
+        this.id= (int) (Math.random()*1000);
+        this.currentCart=new Cart(this.id);
         this.name = name;
-        this.address = address;
-        this.phone = phone;
+        this.address=address;
+        this.phone=phone;
 
     }
-
     public int getId() {
         return id;
     }
 
-    public void setId(int id, int adminId) {
+    public void setId(int id,int adminId) {
 
         this.id = id;
         currentCart.setId(id);
@@ -65,7 +63,6 @@ public class Customer implements iCustomer {
     public iCart getCart() {
         return currentCart;
     }
-
     public void setCart(iCart cart) {
         this.currentCart = cart;
     }

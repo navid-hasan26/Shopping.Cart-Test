@@ -10,13 +10,12 @@ public class Cart implements iCart {
     private int userId;
     private List<Product> products = new ArrayList<Product>();
     private float totalPrice;
-
-    public Cart(int userId) {
+    public Cart(int userId){
         this.userId = userId;
-        this.id = (int) (Math.random() * 1000);
-        this.numberOfProducts = 0;
-        this.totalPrice = 0;
-        this.products = new ArrayList<Product>();
+        this.id=(int) (Math.random()*1000);
+        this.numberOfProducts=0;
+        this.totalPrice=0;
+        this.products=new ArrayList<Product>();
     }
 
 
@@ -24,7 +23,7 @@ public class Cart implements iCart {
     public float addProduct(Product product) {
         this.products.add(product);
         this.numberOfProducts++;
-        this.totalPrice += product.getPrice();
+        this.totalPrice+=product.getPrice();
         return this.totalPrice;
     }
 
@@ -32,7 +31,7 @@ public class Cart implements iCart {
     public float removeProduct(Product product) {
         this.products.remove(product);
         this.numberOfProducts--;
-        this.totalPrice -= product.getPrice();
+        this.totalPrice-=product.getPrice();
 
         return this.totalPrice;
 
@@ -42,9 +41,9 @@ public class Cart implements iCart {
     public float updateProduct(Product product) {
         this.products.remove(product);
         this.products.add(product);
-        this.totalPrice = 0;
-        for (Product p : products) {
-            this.totalPrice += p.getPrice();
+        this.totalPrice=0;
+        for (Product p:products) {
+            this.totalPrice+=p.getPrice();
         }
 
         return this.totalPrice;
@@ -52,9 +51,9 @@ public class Cart implements iCart {
 
     @Override
     public float checkout() {
-        float total = 0.0f;
-        for (Product p : products) {
-            total += p.getPrice();
+        float total=0.0f;
+        for (Product p:products) {
+            total+=p.getPrice();
         }
 
         return total;
@@ -76,8 +75,9 @@ public class Cart implements iCart {
     }
 
 
-    public int setId(int id) {
-        return this.id = id;
+
+    public  int setId(int id) {
+        return      this.id = id;
     }
 
     public float getTotalPrice() {

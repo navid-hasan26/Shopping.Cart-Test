@@ -25,7 +25,6 @@ class CustomerTest {
 
 
         Admin admin = new Admin("Navid");
-
         customer = new Customer("Navid026");
         shop = Shop.getInstance();
         product1 = new Product("Pen", 20);
@@ -59,8 +58,8 @@ class CustomerTest {
     @Test
     @Order(3)
     void getName() {
-            assertEquals("Navid026", customer.getName());
-        }
+        assertEquals("Navid026", customer.getName());
+    }
 
     @Test
     @Order(4)
@@ -99,7 +98,7 @@ class CustomerTest {
     @Test
     @Order(9)
     void getCart() {
-       assertNotNull(customer.getCart());
+        assertNotNull(customer.getCart());
     }
 
     @Test
