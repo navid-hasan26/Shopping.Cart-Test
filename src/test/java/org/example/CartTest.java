@@ -29,48 +29,47 @@ class CartTest {
 
     @Test
     @Order(1)
-        void addProduct() {
-        assertEquals(100,cart.addProduct(product1));
+    void addProduct() {
+        assertEquals(100, cart.addProduct(product1));
     }
 
     @Test
     @Order(2)
     void removeProduct() {
-        assertEquals(80,cart.removeProduct(product1));
+        assertEquals(80, cart.removeProduct(product1));
     }
 
     @Test
     @Order(3)
     void updateProduct() {
         product2.setPrice(50);
-        assertEquals(100,cart.updateProduct(product1));
+        assertEquals(100, cart.updateProduct(product1));
     }
 
     @Test
     @Order(4)
     void checkout() {
-        assertEquals(100,cart.checkout());
+        assertEquals(100, cart.checkout());
     }
 
     @Test
     void getPruducts() {
-        assertEquals(3,cart.getProducts().size());
+        assertEquals(3, cart.getProducts().size());
     }
 
     @Test
     void getId() {
-        assertInstanceOf(Integer.class,cart.getId());
+        assertInstanceOf(Integer.class, cart.getId());
     }
 
     @Test
     void getNumberOfProducts() {
-        assertEquals(3,cart.getNumberOfProducts());
+        assertEquals(3, cart.getNumberOfProducts());
     }
-
 
 
     @Test
     void getTotalPrice() {
-        assertEquals(100,cart.getTotalPrice());
+        assertEquals(100, cart.getTotalPrice());
     }
 }

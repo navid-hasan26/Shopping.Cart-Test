@@ -8,8 +8,12 @@ public interface iCustomer {
     int getId();
 
     float buyProduct();
+
     float addProduct(Product product);
+
     float removeProduct(Product product);
+
     List<Product> viewProducts();
-    float makePayment( Payment payment);
+
+    float makePayment(Payment payment);
 }

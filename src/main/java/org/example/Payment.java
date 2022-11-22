@@ -9,5 +9,5 @@ public abstract class Payment {
 
     public abstract float payment(float amount);
 
-    public abstract float offers( float amount, float offer);
+    public abstract float offers(float amount, float offer);
 }

@@ -10,7 +10,7 @@ public class Product {
 
 
     public Product(String name, int price) {
-        this.id= (int) (Math.random()*1000);
+        this.id = (int) (Math.random() * 1000);
         this.name = name;
         this.price = price;
     }

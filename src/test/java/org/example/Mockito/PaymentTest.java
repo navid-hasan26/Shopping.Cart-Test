@@ -1,5 +1,6 @@
-package org.example;
+package org.example.Mockito;
 
+import org.example.Payment;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentMatchers;
@@ -10,8 +11,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class PaymentTest {
 
     static Payment payment;
+
     @BeforeAll
-    static void init(){
+    static void init() {
         payment = Mockito.mock(Payment.class);
     }
 
